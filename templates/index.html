@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head><h1>IPL Inning Score Prediction</h1></head>
+<body>
+	<form action="{{url_for('predict')}}" method="POST">
+		<p>Runs: <input type="text" name="runs" placeholder="Ex. 64"></p>
+		<p>Overs: <input type="text" name="overs" placeholder="Ex. 6.2"></p>
+		<p>Wickets: <input type="text" name="wickets" placeholder="Ex. 2"></p>
+		<p>Runs_last_5 <input type="text" name="runs_last_5" placeholder="Runs in last 5 overs"></p>
+		<p>Wickets_last_5 <input type="text" name="wickets_last_5" placeholder="Wickets in last 5 overs"></p>
+		<!-- Batting Team Dropbox -->
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="batting-team">
+			<option value= 'none'>--Select A Batting Team--</option>
+			<option value="Chennai Super Kings">Chennai Super Kings</option>
+			<option value="Delhi Daredevils">Delhi Daredevils</option>
+			<option value="Kings XI Punjab">Kings XI Punjab</option>
+			<option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+			<option value="Mumbai Indians">Mumbai Indians</option>
+			<option value="Rajasthan Royals">Rajasthan Royals</option>
+			<option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+			<option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+		</select><br><br>
+
+		<!-- Bowling Team Dropbox-->
+		<select class="form-select form-select-sm" aria-label=".form-select-sm example" name="bowling-team">
+			<option value= 'none'>--Select A Batting Team--</option>
+			<option value="Chennai Super Kings">Chennai Super Kings</option>
+			<option value="Delhi Daredevils">Delhi Daredevils</option>
+			<option value="Kings XI Punjab">Kings XI Punjab</option>
+			<option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+			<option value="Mumbai Indians">Mumbai Indians</option>
+			<option value="Rajasthan Royals">Rajasthan Royals</option>
+			<option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+			<option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+		</select>
+
+		<br>
+
+	<input type="submit" class="myButton" value="Predict Score">
+
+	</form>
+
+</body>
+</html>
